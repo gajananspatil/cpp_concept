@@ -34,11 +34,18 @@ namespace tmp
             return m_arr[index]; 
         }
 
-        friend std::ostream& operator << (std::ostream&out, const Array &arr)
+        type at(int index) const
+        {
+            if(index<0||index>=length)
+                throw 2;
+            return m_arr[index]; 
+        }
+
+        friend std::ostream& operator << (std::ostream &out, const Array &arr)
         {
             for(int i=0;i<arr.length;i++)
-                std::cout<<i<<",";
-            std::cout<< std::endl; 
+                out<<arr.at(i)<<",";
+            out<< std::endl; 
             return out;
         }
     };
@@ -53,4 +60,11 @@ int main()
     for(int i=0;i<10;i++)
         arr[i]=i;
     std::cout<< arr;
+    Array<char> arr1(10);
+
+    for(int i=0;i<10;i++)
+    {
+        arr1[i]=i+97;
+    }
+    std::cout<< arr1;
 }

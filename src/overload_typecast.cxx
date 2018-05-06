@@ -28,4 +28,5 @@ int main()
     Rupees rs( 100);
    // cout<<rs.getRs();
     cout<<rs;
+    int rupees = rs;
 }

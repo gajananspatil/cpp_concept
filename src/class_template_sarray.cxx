@@ -26,6 +26,11 @@ namespace tmp
             return m_arr[index]; 
         }
 
+        type at(int index)
+        {
+            return m_arr[index]; 
+        }
+
     };
 
 }
@@ -37,8 +42,16 @@ int main()
 
     for(int i=0;i<10;i++)
         arr[i]=i;
+
     for(size_t i=0;i < 10; i++)
         std::cout<< arr[i]<<",";
 
+    Array<char,10> arr1;
+
+    for(int i=0;i<10;i++)
+        arr1[i]=i+97;
+
+    for(size_t i=0;i < 10; i++)
+        std::cout<< arr1[i]<<",";
     return 0;
 }

@@ -45,7 +45,7 @@ int main()
     double c = 3.0, d = 5.5;
     cout << doubleA.add(c,d) << endl;
 
-    char e='e', f='f';
+    char e='x', f='y';
     cout << charA.add(e,f);
 
     return 0;
